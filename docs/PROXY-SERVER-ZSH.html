@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>はじめに · GitBook</title>
+        <title>Zshでプロキシに接続 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="PROXY-SERVER.html" />
+    <link rel="next" href="POSTSCRIPT.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="PROXY-SERVER-BASH.html" />
     
 
     </head>
@@ -106,7 +106,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="BOOK-README.html">
+        <li class="chapter " data-level="1.2" data-path="BOOK-README.html">
             
                 <a href="BOOK-README.html">
             
@@ -146,7 +146,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="PROXY-SERVER-ZSH.html">
+        <li class="chapter active" data-level="1.3.2" data-path="PROXY-SERVER-ZSH.html">
             
                 <a href="PROXY-SERVER-ZSH.html">
             
@@ -207,7 +207,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >はじめに</a>
+        <a href="." >Zshでプロキシに接続</a>
     </h1>
 </div>
 
@@ -224,19 +224,13 @@
                                 
                                 <p><style>
 body {
-  counter-reset: h1 0;
+  counter-reset: h1 3;
 }
 </style></p>
-<h1 id="&#x5BFE;&#x8C61;&#x8AAD;&#x8005;">&#x5BFE;&#x8C61;&#x8AAD;&#x8005;</h1>
-<p>&#x3053;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306E;&#x5BFE;&#x8C61;&#x8AAD;&#x8005;&#x306F;&#x91D1;&#x6CA2;&#x5DE5;&#x696D;&#x5927;&#x5B66;&#x306E;&#x5B66;&#x751F;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x7279;&#x306B; <strong>&#x5B66;&#x5185;</strong> &#x3067;&#x69D8;&#x3005;&#x306A;&#x958B;&#x767A;&#x3092;&#x884C;&#x3063;&#x3066;&#x3044;&#x304D;&#x305F;&#x3044;&#x3068;&#x3044;&#x3046;&#x601D;&#x3044;&#x3092;&#x6301;&#x3063;&#x3066;&#x3044;&#x308B;&#x4EBA;&#x306B;&#x306F;&#x53C2;&#x8003;&#x306B;&#x306A;&#x308B;&#x304B;&#x3082;&#x3057;&#x308C;&#x307E;&#x305B;&#x3093;&#x3002;</p>
-<p>&#x30D7;&#x30ED;&#x30AD;&#x30B7;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x3092;&#x4ECB;&#x3057;&#x305F;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x3084;&#x308A;&#x53D6;&#x308A;&#x306A;&#x3069;&#x3001;&#x60C5;&#x5831;&#x51E6;&#x7406;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x30BB;&#x30F3;&#x30BF;&#x30FC;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x898B;&#x3064;&#x3051;&#x306B;&#x304F;&#x3044;(&#x307E;&#x305F;&#x306F;&#x66F8;&#x3044;&#x3066;&#x3044;&#x306A;&#x3044;)&#x60C5;&#x5831;&#x3092;&#x307E;&#x3068;&#x3081;&#x305F;&#x306E;&#x3067;&#x53C2;&#x8003;&#x306B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p>&#x57FA;&#x672C;&#x7684;&#x306B;&#x5358;&#x8A9E;&#x306E;&#x8AAC;&#x660E;&#x306F;&#x3057;&#x306A;&#x3044;&#x306E;&#x3067;&#x3001;&#x5206;&#x304B;&#x3089;&#x306A;&#x3044;&#x30FB;&#x6C17;&#x306B;&#x306A;&#x308B;&#x3068;&#x3044;&#x3046;&#x65B9;&#x306F;&#x81EA;&#x8EAB;&#x3067;&#x8ABF;&#x3079;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<h1 id="&#x514D;&#x8CAC;">&#x514D;&#x8CAC;</h1>
-<p>&#x3053;&#x306E;&#x30B5;&#x30A4;&#x30C8;&#x306E;&#x8A18;&#x8FF0;&#x3084;&#x53C2;&#x8003;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x3088;&#x3063;&#x3066;&#x3001;&#x8AAD;&#x8005;&#x306E;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30BF;&#x3001;&#x307E;&#x305F;&#x306F;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x74B0;&#x5883;&#x306B;&#x652F;&#x969C;&#x30FB;&#x969C;&#x5BB3;&#x304C;&#x751F;&#x3058;&#x3066;&#x3082;&#x3001;&#x3044;&#x304B;&#x306A;&#x308B;&#x7406;&#x7531;&#x306B;&#x3088;&#x3063;&#x3066;&#x3082;&#x8457;&#x8005;&#x306F;&#x4E00;&#x5207;&#x8CAC;&#x4EFB;&#x3092;&#x8CA0;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;</p>
-<p>&#x66F8;&#x3044;&#x3066;&#x3044;&#x308B;&#x4EBA;&#x306F;&#x5C02;&#x9580;&#x7684;&#x306B;Linux&#x3084;&#x30D7;&#x30ED;&#x30AD;&#x30B7;&#x306A;&#x3069;&#x3092;&#x89E6;&#x3063;&#x3066;&#x3044;&#x308B;&#x8A33;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</p>
-<p>&#x3053;&#x306E;&#x30B5;&#x30A4;&#x30C8;&#x3084;&#x95A2;&#x9023;&#x3059;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;GitHub&#x3067;<a href="https://github.com/i-ta28/kit_dev_settings" target="_blank">&#x7BA1;&#x7406;</a>&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x9593;&#x9055;&#x3044;&#x3084;&#x8AA4;&#x690D;&#x304C;&#x3042;&#x3063;&#x305F;&#x3089;&#x3001;Issues&#x3001;Pull Request&#x3001;<a href="https://twitter.com/101ta28" target="_blank">Twitter</a>&#x306B;&#x304A;&#x9858;&#x3044;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<h1 id="zsh&#x3067;&#x30D7;&#x30ED;&#x30AD;&#x30B7;&#x306B;&#x63A5;&#x7D9A;">Zsh&#x3067;&#x30D7;&#x30ED;&#x30AD;&#x30B7;&#x306B;&#x63A5;&#x7D9A;</h1>
+<p>&#x3053;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x306F;Zsh&#x3067;&#x30D7;&#x30ED;&#x30AD;&#x30B7;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x306B;&#x63A5;&#x7D9A;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#x3092;&#x307E;&#x3068;&#x3081;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x81EA;&#x8EAB;&#x306E;&#x74B0;&#x5883;&#x304C;Zsh&#x3067;&#x3042;&#x308B;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x304B;&#x3089;&#x3001;&#x30DA;&#x30FC;&#x30B8;&#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<p>Zsh&#x306F;macOS 10.15 Catalina<strong>&#x4EE5;&#x964D;</strong>&#x3067;&#x5229;&#x7528;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;&#x3002;</p>
 
                                 
                                 </section>
@@ -264,12 +258,12 @@ body {
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: README">
+                <a href="PROXY-SERVER-BASH.html" class="navigation navigation-prev " aria-label="Previous page: Bashでプロキシに接続">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="PROXY-SERVER.html" class="navigation navigation-next " aria-label="Next page: プロキシサーバーについて">
+                <a href="POSTSCRIPT.html" class="navigation navigation-next " aria-label="Next page: おわりに">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -280,7 +274,7 @@ body {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"はじめに","level":"1.2","depth":1,"next":{"title":"プロキシサーバーについて","level":"1.3","depth":1,"path":"PROXY-SERVER.md","ref":"PROXY-SERVER.md","articles":[{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"path":"PROXY-SERVER-BASH.md","ref":"PROXY-SERVER-BASH.md","articles":[]},{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"path":"PROXY-SERVER-ZSH.md","ref":"PROXY-SERVER-ZSH.md","articles":[]}]},"previous":{"title":"README","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","hide-published-with","numbered-headings","copy-code-button","back-to-top-button","-lunr","-search","search-pro-kui"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"numbered-headings":{},"back-to-top-button":{},"copy-code-button":{},"search-pro-kui":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"BOOK-README.md","mtime":"2021-04-22T16:48:05.815Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-22T17:03:09.527Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"next":{"title":"おわりに","level":"1.4","depth":1,"path":"POSTSCRIPT.md","ref":"POSTSCRIPT.md","articles":[]},"previous":{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"path":"PROXY-SERVER-BASH.md","ref":"PROXY-SERVER-BASH.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","hide-published-with","numbered-headings","copy-code-button","back-to-top-button","-lunr","-search","search-pro-kui"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"numbered-headings":{},"back-to-top-button":{},"copy-code-button":{},"search-pro-kui":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"PROXY-SERVER-ZSH.md","mtime":"2021-04-22T17:02:12.279Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-22T17:03:09.527Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
