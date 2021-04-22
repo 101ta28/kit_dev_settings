@@ -1,4 +1,4 @@
 {
-  "plugins": ["include-codeblock", "hide-published-with", "copy-code-button", "back-to-top-button", "-lunr", "-search", "search-pro-kui"],
+  "plugins": ["include-codeblock", "hide-published-with", "numbered-headings", "copy-code-button", "back-to-top-button", "-lunr", "-search", "search-pro-kui"],
   "language": "ja"
 }

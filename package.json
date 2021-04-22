@@ -22,5 +22,8 @@
     "gitbook-plugin-search-pro-kui": "^1.0.0",
     "gitbook-plugin-include-codeblock": "^3.2.2"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "keywords": [
+    "development"
+  ]
 }
