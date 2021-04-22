@@ -1,6 +1,6 @@
 # Summary
 
-* [GitHubのREADME](README.md)
+* [README](README.md)
 * [はじめに](BOOK-README.md)
 * [プロキシサーバーについて](contents/PROXY-SERVER.md)
     * [Bashでプロキシに接続](contents/PROXY-SERVER-BASH.md)

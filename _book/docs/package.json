@@ -1,0 +1,29 @@
+{
+  "name": "kit_dev_settings",
+  "version": "1.0.0",
+  "description": "This is KIT development settings memo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-ta28/kit_dev_settings.git"
+  },
+  "author": "Imai Tatsuya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i-ta28/kit_dev_settings/issues"
+  },
+  "homepage": "https://github.com/i-ta28/kit_dev_settings#readme",
+  "dependencies": {
+    "gitbook-plugin-hide-published-with": "^1.0.3",
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-search-pro-kui": "^1.0.0",
+    "gitbook-plugin-include-codeblock": "^3.2.2"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "development"
+  ]
+}
