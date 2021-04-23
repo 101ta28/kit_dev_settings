@@ -231,6 +231,30 @@ body {
 <p>&#x3053;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x306F;Zsh&#x3067;&#x30D7;&#x30ED;&#x30AD;&#x30B7;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x306B;&#x63A5;&#x7D9A;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#x3092;&#x307E;&#x3068;&#x3081;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 <p>&#x81EA;&#x8EAB;&#x306E;&#x74B0;&#x5883;&#x304C;Zsh&#x3067;&#x3042;&#x308B;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x304B;&#x3089;&#x3001;&#x30DA;&#x30FC;&#x30B8;&#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
 <p>Zsh&#x306F;macOS 10.15 Catalina<strong>&#x4EE5;&#x964D;</strong>&#x3067;&#x5229;&#x7528;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;&#x3002;</p>
+<p><a href="https://github.com/i-ta28/kit_dev_settings/blob/main/files/zsh/.proxy.sh" target="_blank">&#x30D7;&#x30ED;&#x30AD;&#x30B7;&#x63A5;&#x7D9A;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;</a></p>
+<pre><code class="lang-zsh"><span class="hljs-meta">#!/bin/zsh</span>
+<span class="hljs-built_in">export</span> http_proxy=<span class="hljs-string">&quot;http://wwwproxy.kanazawa-it.ac.jp:8080/&quot;</span>
+<span class="hljs-built_in">export</span> https_proxy=<span class="hljs-string">&quot;http://wwwproxy.kanazawa-it.ac.jp:8080/&quot;</span>
+<span class="hljs-comment"># git settings</span>
+git config --global http.proxy http://wwwproxy.kanazawa-it.ac.jp:8080
+<span class="hljs-comment"># npm settings</span>
+npm -g config <span class="hljs-built_in">set</span> http-proxy <span class="hljs-string">&quot;http://wwwproxy.kanazawa-it.ac.jp:8080/&quot;</span>
+npm -g config <span class="hljs-built_in">set</span> https-proxy <span class="hljs-string">&quot;http://wwwproxy.kanazawa-it.ac.jp:8080/&quot;</span>
+npm -g config <span class="hljs-built_in">set</span> registry <span class="hljs-string">&quot;http://registry.npmjs.org/&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Set proxy&quot;</span>
+</code></pre>
+<p><a href="https://github.com/i-ta28/kit_dev_settings/blob/main/files/zsh/.noproxy.sh" target="_blank">&#x30D7;&#x30ED;&#x30AD;&#x30B7;&#x5207;&#x65AD;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;</a></p>
+<pre><code class="lang-zsh"><span class="hljs-meta">#!/bin/zsh</span>
+<span class="hljs-built_in">export</span> http_proxy=<span class="hljs-string">&quot;&quot;</span>
+<span class="hljs-built_in">export</span> https_proxy=<span class="hljs-string">&quot;&quot;</span>
+<span class="hljs-comment"># git settings</span>
+git config --global --unset http.proxy
+<span class="hljs-comment"># npm settings</span>
+npm -g config delete http-proxy
+npm -g config delete https-proxy
+npm -g config delete registry
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Unset proxy&quot;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -274,7 +298,7 @@ body {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"next":{"title":"おわりに","level":"1.4","depth":1,"path":"contents/POSTSCRIPT.md","ref":"contents/POSTSCRIPT.md","articles":[]},"previous":{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"path":"contents/PROXY-SERVER-BASH.md","ref":"contents/PROXY-SERVER-BASH.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","hide-published-with","numbered-headings","copy-code-button","back-to-top-button","-lunr","-search","search-pro-kui"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"numbered-headings":{},"back-to-top-button":{},"copy-code-button":{},"search-pro-kui":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"contents/PROXY-SERVER-ZSH.md","mtime":"2021-04-23T00:59:49.312Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-23T01:41:37.178Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"next":{"title":"おわりに","level":"1.4","depth":1,"path":"contents/POSTSCRIPT.md","ref":"contents/POSTSCRIPT.md","articles":[]},"previous":{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"path":"contents/PROXY-SERVER-BASH.md","ref":"contents/PROXY-SERVER-BASH.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","hide-published-with","numbered-headings","copy-code-button","back-to-top-button","-lunr","-search","search-pro-kui"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"numbered-headings":{},"back-to-top-button":{},"copy-code-button":{},"search-pro-kui":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"contents/PROXY-SERVER-ZSH.md","mtime":"2021-04-23T01:52:43.942Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-23T01:53:11.824Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
