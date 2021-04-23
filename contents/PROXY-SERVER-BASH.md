@@ -6,7 +6,7 @@
 
 BashはUbuntuやWSL(Windows Subsystem for Linux)、 macOS 10.15 Catalina**以前**のOSで利用されていることが多いです。
 
-[プロキシ接続スクリプト](files/bash/.proxy.sh)
+[プロキシ接続スクリプト](https://github.com/i-ta28/kit_dev_settings/blob/main/files/bash/.proxy.sh)
 
 ```bash
 #!/bin/bash
@@ -21,7 +21,7 @@ npm -g config set registry "http://registry.npmjs.org/"
 echo "Set proxy"
 ```
 
-[プロキシ切断スクリプト](files/bash/.noproxy.sh)
+[プロキシ切断スクリプト](https://github.com/i-ta28/kit_dev_settings/blob/main/files/bash/.noproxy.sh)
 
 ```bash
 #!/bin/bash
