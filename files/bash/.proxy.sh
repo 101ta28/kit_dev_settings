@@ -1,6 +1,5 @@
 #!/bin/bash
 #This is KIT proxy connect script.
-#Run this command the first time you use this script.
 #You can use "proxyon" alias.
 #"echo "alias proxyon='source ~/.proxy.sh' >> .bashrc"
 #Usage: sh .proxy.sh or alias "proxyon"

@@ -1,6 +1,5 @@
 #!/bin/bash
 #This is KIT proxy disconnect script.
-#Run this command the first time you use this script.
 #You can use "proxyoff" alias.
 #"echo "alias proxyoff='source ~/.noproxy.sh' >> .bashrc"
 #Usage: sh .proxy.sh or alias "proxyoff"
