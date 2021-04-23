@@ -6,12 +6,21 @@
 
 ZshはmacOS 10.15 Catalina**以降**で利用されていることが多いです。
 
+使い方はコメントを参照してください。
+
 [プロキシ接続スクリプト](https://github.com/i-ta28/kit_dev_settings/blob/main/files/zsh/.proxy.sh)
 
 ```zsh
 #!/bin/zsh
-export http_proxy="http://wwwproxy.kanazawa-it.ac.jp:8080/"
-export https_proxy="http://wwwproxy.kanazawa-it.ac.jp:8080/"
+#This is KIT proxy connect script.
+#Run this command the first time you use this script.
+#You can use "proxyon" alias.
+#"echo "alias proxyon='source ~/.proxy.sh' >> .zshrc"
+#Usage: sh .proxy.sh or alias "proxyon"
+#(Tatsuya Imai, Japan)
+
+http_proxy="http://wwwproxy.kanazawa-it.ac.jp:8080/"
+https_proxy="http://wwwproxy.kanazawa-it.ac.jp:8080/"
 # git settings
 git config --global http.proxy http://wwwproxy.kanazawa-it.ac.jp:8080
 # npm settings
@@ -25,6 +34,14 @@ echo "Set proxy"
 
 ```zsh
 #!/bin/zsh
+#!/bin/zsh
+#This is KIT proxy disconnect script.
+#Run this command the first time you use this script.
+#You can use "proxyoff" alias.
+#"echo "alias proxyoff='source ~/.noproxy.sh' >> .zshrc"
+#Usage: sh .proxy.sh or alias "proxyoff"
+#(Tatsuya Imai, Japan)
+
 export http_proxy=""
 export https_proxy=""
 # git settings

@@ -231,8 +231,16 @@ body {
 <p>&#x3053;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x306F;Bash&#x3067;&#x30D7;&#x30ED;&#x30AD;&#x30B7;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x306B;&#x63A5;&#x7D9A;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#x3092;&#x307E;&#x3068;&#x3081;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 <p>&#x81EA;&#x8EAB;&#x306E;&#x74B0;&#x5883;&#x304C;Bash&#x3067;&#x3042;&#x308B;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x304B;&#x3089;&#x3001;&#x30DA;&#x30FC;&#x30B8;&#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
 <p>Bash&#x306F;Ubuntu&#x3084;WSL(Windows Subsystem for Linux)&#x3001; macOS 10.15 Catalina<strong>&#x4EE5;&#x524D;</strong>&#x306E;OS&#x3067;&#x5229;&#x7528;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x4F7F;&#x3044;&#x65B9;&#x306F;&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
 <p><a href="https://github.com/i-ta28/kit_dev_settings/blob/main/files/bash/.proxy.sh" target="_blank">&#x30D7;&#x30ED;&#x30AD;&#x30B7;&#x63A5;&#x7D9A;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;</a></p>
 <pre><code class="lang-bash"><span class="hljs-meta">#!/bin/bash</span>
+<span class="hljs-comment">#This is KIT proxy connect script.</span>
+<span class="hljs-comment">#Run this command the first time you use this script.</span>
+<span class="hljs-comment">#You can use &quot;proxyon&quot; alias.</span>
+<span class="hljs-comment">#&quot;echo &quot;alias proxyon=&apos;source ~/.proxy.sh&apos; &gt;&gt; .bashrc&quot;</span>
+<span class="hljs-comment">#Usage: sh .proxy.sh or alias &quot;proxyon&quot;</span>
+<span class="hljs-comment">#(Tatsuya Imai, Japan)</span>
+
 <span class="hljs-built_in">export</span> http_proxy=<span class="hljs-string">&quot;http://wwwproxy.kanazawa-it.ac.jp:8080/&quot;</span>
 <span class="hljs-built_in">export</span> https_proxy=<span class="hljs-string">&quot;http://wwwproxy.kanazawa-it.ac.jp:8080/&quot;</span>
 <span class="hljs-comment"># git settings</span>
@@ -245,6 +253,13 @@ npm -g config <span class="hljs-built_in">set</span> registry <span class="hljs-
 </code></pre>
 <p><a href="https://github.com/i-ta28/kit_dev_settings/blob/main/files/bash/.noproxy.sh" target="_blank">&#x30D7;&#x30ED;&#x30AD;&#x30B7;&#x5207;&#x65AD;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;</a></p>
 <pre><code class="lang-bash"><span class="hljs-meta">#!/bin/bash</span>
+<span class="hljs-comment">#This is KIT proxy disconnect script.</span>
+<span class="hljs-comment">#Run this command the first time you use this script.</span>
+<span class="hljs-comment">#You can use &quot;proxyoff&quot; alias.</span>
+<span class="hljs-comment">#&quot;echo &quot;alias proxyoff=&apos;source ~/.noproxy.sh&apos; &gt;&gt; .bashrc&quot;</span>
+<span class="hljs-comment">#Usage: sh .proxy.sh or alias &quot;proxyoff&quot;</span>
+<span class="hljs-comment">#(Tatsuya Imai, Japan)</span>
+
 <span class="hljs-built_in">export</span> http_proxy=<span class="hljs-string">&quot;&quot;</span>
 <span class="hljs-built_in">export</span> https_proxy=<span class="hljs-string">&quot;&quot;</span>
 <span class="hljs-comment"># git settings</span>
@@ -298,7 +313,7 @@ npm -g config delete registry
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"next":{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"path":"contents/PROXY-SERVER-ZSH.md","ref":"contents/PROXY-SERVER-ZSH.md","articles":[]},"previous":{"title":"プロキシサーバーについて","level":"1.3","depth":1,"path":"contents/PROXY-SERVER.md","ref":"contents/PROXY-SERVER.md","articles":[{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"path":"contents/PROXY-SERVER-BASH.md","ref":"contents/PROXY-SERVER-BASH.md","articles":[]},{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"path":"contents/PROXY-SERVER-ZSH.md","ref":"contents/PROXY-SERVER-ZSH.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["include-codeblock","hide-published-with","numbered-headings","copy-code-button","back-to-top-button","-lunr","-search","search-pro-kui"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"numbered-headings":{},"back-to-top-button":{},"copy-code-button":{},"search-pro-kui":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"contents/PROXY-SERVER-BASH.md","mtime":"2021-04-23T01:39:24.684Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-23T01:57:22.761Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"next":{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"path":"contents/PROXY-SERVER-ZSH.md","ref":"contents/PROXY-SERVER-ZSH.md","articles":[]},"previous":{"title":"プロキシサーバーについて","level":"1.3","depth":1,"path":"contents/PROXY-SERVER.md","ref":"contents/PROXY-SERVER.md","articles":[{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"path":"contents/PROXY-SERVER-BASH.md","ref":"contents/PROXY-SERVER-BASH.md","articles":[]},{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"path":"contents/PROXY-SERVER-ZSH.md","ref":"contents/PROXY-SERVER-ZSH.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["include-codeblock","hide-published-with","numbered-headings","copy-code-button","back-to-top-button","-lunr","-search","search-pro-kui"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"numbered-headings":{},"back-to-top-button":{},"copy-code-button":{},"search-pro-kui":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"contents/PROXY-SERVER-BASH.md","mtime":"2021-04-23T02:51:18.146Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-23T02:52:14.854Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
