@@ -4,4 +4,4 @@
 
 工大内でプロキシを通すための参考資料です。
 
-[URL](https://i-ta28.github.io/kit_dev_settings/)
+[URL](https://101ta28.github.io/kit_dev_settings/)
