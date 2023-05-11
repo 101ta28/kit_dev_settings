@@ -3,7 +3,7 @@
 <html lang="ja" >
     <head>
         <meta charset="UTF-8">
-        <title>README · KIT Dev Settings</title>
+        <title>はじめに · KIT Dev Settings</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.7">
@@ -11,20 +11,20 @@
         
         
     
-    <link rel="stylesheet" href="gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css">
 
     
             
                 
-                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
         
@@ -52,12 +52,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="contents/BOOK-README.html" />
+    <link rel="next" href="PROXY-SERVER.html" />
     
+    
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -86,9 +88,9 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="../">
             
-                <a href="./">
+                <a href="../">
             
                     
                     README
@@ -99,9 +101,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="contents/BOOK-README.html">
+        <li class="chapter active" data-level="1.2" data-path="BOOK-README.html">
             
-                <a href="contents/BOOK-README.html">
+                <a href="BOOK-README.html">
             
                     
                     はじめに
@@ -112,9 +114,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="contents/PROXY-SERVER.html">
+        <li class="chapter " data-level="1.3" data-path="PROXY-SERVER.html">
             
-                <a href="contents/PROXY-SERVER.html">
+                <a href="PROXY-SERVER.html">
             
                     
                     プロキシサーバーについて
@@ -126,9 +128,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="contents/PROXY-SERVER-BASH.html">
+        <li class="chapter " data-level="1.3.1" data-path="PROXY-SERVER-BASH.html">
             
-                <a href="contents/PROXY-SERVER-BASH.html">
+                <a href="PROXY-SERVER-BASH.html">
             
                     
                     Bashでプロキシに接続
@@ -139,9 +141,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="contents/PROXY-SERVER-ZSH.html">
+        <li class="chapter " data-level="1.3.2" data-path="PROXY-SERVER-ZSH.html">
             
-                <a href="contents/PROXY-SERVER-ZSH.html">
+                <a href="PROXY-SERVER-ZSH.html">
             
                     
                     Zshでプロキシに接続
@@ -157,9 +159,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="contents/POSTSCRIPT.html">
+        <li class="chapter " data-level="1.4" data-path="POSTSCRIPT.html">
             
-                <a href="contents/POSTSCRIPT.html">
+                <a href="POSTSCRIPT.html">
             
                     
                     おわりに
@@ -200,7 +202,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >README</a>
+        <a href=".." >はじめに</a>
     </h1>
 </div>
 
@@ -215,15 +217,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="kit-development-settings">KIT Development Settings</h1>
-<h2 id="説明">説明</h2>
-<p>工大内でプロキシを通すための参考資料です。</p>
-<p>このページは<a href="https://github.com/honkit/honkit" target="_blank">HonKit</a>で作成されています。</p>
-<pre><code class="lang-bash"><span class="hljs-comment"># HonKitのインストール</span>
-yarn
-<span class="hljs-comment"># ローカルサーバ立ち上げ</span>
-yarn serve
-</code></pre>
+                                <h1 id="対象読者">対象読者</h1>
+<p>このページの対象読者は金沢工業大学の学生です。</p>
+<p>特に <strong>学内</strong> で様々な開発を行っていきたいという思いを持っている人には参考になるかもしれません。</p>
+<p>プロキシサーバーを介したデータのやり取りなど、情報処理サービスセンターのページで見つけにくい(または書いていない)情報をまとめたので参考にしてください。</p>
+<p>基本的に単語の説明はしないので、分からない・気になるという方は自身で調べてみてください。</p>
+<h1 id="免責">免責</h1>
+<p>このサイトの記述や参考ファイルをダウンロードすることによって、読者のコンピュータ、またはネットワーク環境に支障・障害が生じても、いかなる理由によっても著者は一切責任を負いません。</p>
+<p>書いている人は専門的にLinuxやプロキシなどを触っている訳ではありません。</p>
+<p>このサイトや関連するファイルはGitHubで管理しています。</p>
+<p>間違いや誤植があった場合、<a href="https://github.com/101ta28/kit_dev_settings" target="_blank">GitHubリポジトリ</a>のIssues、Pull Requestをお気軽に投げて下さい。</p>
+<p>または、<a href="https://twitter.com/101ta28" target="_blank">Twitter</a>のDMでも構いません。</p>
 
                                 
                                 </section>
@@ -251,8 +255,12 @@ yarn serve
 
             
                 
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: README">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="contents/BOOK-README.html" class="navigation navigation-next navigation-unique" aria-label="Next page: はじめに">
+                
+                <a href="PROXY-SERVER.html" class="navigation navigation-next " aria-label="Next page: プロキシサーバーについて">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -263,7 +271,7 @@ yarn serve
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"README","level":"1.1","depth":1,"next":{"title":"はじめに","level":"1.2","depth":1,"path":"contents/BOOK-README.md","ref":"contents/BOOK-README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Imai Tatsuya","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"KIT Dev Settings","language":"ja","gitbook":"*","description":"学内で開発するときに必要な情報"},"file":{"path":"README.md","mtime":"2023-05-11T07:57:41.073Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-11T07:57:58.232Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"はじめに","level":"1.2","depth":1,"next":{"title":"プロキシサーバーについて","level":"1.3","depth":1,"path":"contents/PROXY-SERVER.md","ref":"contents/PROXY-SERVER.md","articles":[{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"path":"contents/PROXY-SERVER-BASH.md","ref":"contents/PROXY-SERVER-BASH.md","articles":[]},{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"path":"contents/PROXY-SERVER-ZSH.md","ref":"contents/PROXY-SERVER-ZSH.md","articles":[]}]},"previous":{"title":"README","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Imai Tatsuya","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"KIT Dev Settings","language":"ja","gitbook":"*","description":"学内で開発するときに必要な情報"},"file":{"path":"contents/BOOK-README.md","mtime":"2023-05-11T07:12:04.122Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-11T07:30:54.614Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -313,27 +321,27 @@ yarn serve
             book.classList.remove("honkit-cloak");
         }
     </script>
-    <script src="gitbook/gitbook.js"></script>
-    <script src="gitbook/theme.js"></script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
     
         
-        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 

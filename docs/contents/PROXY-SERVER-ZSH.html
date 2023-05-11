@@ -3,7 +3,7 @@
 <html lang="ja" >
     <head>
         <meta charset="UTF-8">
-        <title>Bashでプロキシに接続 · KIT Dev Settings</title>
+        <title>Zshでプロキシに接続 · KIT Dev Settings</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.7">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="PROXY-SERVER-ZSH.html" />
+    <link rel="next" href="POSTSCRIPT.html" />
     
     
-    <link rel="prev" href="PROXY-SERVER.html" />
+    <link rel="prev" href="PROXY-SERVER-BASH.html" />
     
 
     </head>
@@ -128,7 +128,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="PROXY-SERVER-BASH.html">
+        <li class="chapter " data-level="1.3.1" data-path="PROXY-SERVER-BASH.html">
             
                 <a href="PROXY-SERVER-BASH.html">
             
@@ -141,7 +141,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="PROXY-SERVER-ZSH.html">
+        <li class="chapter active" data-level="1.3.2" data-path="PROXY-SERVER-ZSH.html">
             
                 <a href="PROXY-SERVER-ZSH.html">
             
@@ -202,7 +202,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Bashでプロキシに接続</a>
+        <a href=".." >Zshでプロキシに接続</a>
     </h1>
 </div>
 
@@ -217,21 +217,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="bashでプロキシに接続">Bashでプロキシに接続</h1>
-<p>このページではBashでプロキシサーバーに接続する方法をまとめています。</p>
-<p>自身の環境がBashであることを確認してから、ページを参照してください。</p>
-<p>BashはUbuntuやWSL(Windows Subsystem for Linux)、 macOS 10.15 Catalina<strong>以前</strong>のOSで利用されていることが多いです。</p>
+                                <h1 id="zshでプロキシに接続">Zshでプロキシに接続</h1>
+<p>このページではZshでプロキシサーバーに接続する方法をまとめています。</p>
+<p>自身の環境がZshであることを確認してから、ページを参照してください。</p>
+<p>ZshはmacOS 10.15 Catalina<strong>以降</strong>で利用されていることが多いです。</p>
 <p>使い方はコメントを参照してください。</p>
-<p><a href="https://github.com/101ta28/kit_dev_settings/blob/main/files/bash/.proxy.sh" target="_blank">プロキシ接続スクリプト</a></p>
-<pre><code class="lang-bash"><span class="hljs-meta">#!/bin/bash</span>
+<p><a href="https://github.com/101ta28/kit_dev_settings/blob/main/files/zsh/.proxy.sh" target="_blank">プロキシ接続スクリプト</a></p>
+<pre><code class="lang-zsh"><span class="hljs-meta">#!/bin/zsh</span>
 <span class="hljs-comment">#This is KIT proxy connect script.</span>
 <span class="hljs-comment">#You can use &quot;proxyon&quot; alias.</span>
-<span class="hljs-comment">#&quot;echo &quot;alias proxyon=&apos;source ~/.proxy.sh&apos; &gt;&gt; .bashrc&quot;</span>
+<span class="hljs-comment">#&quot;echo &quot;alias proxyon=&apos;source ~/.proxy.sh&apos; &gt;&gt; .zshrc&quot;</span>
 <span class="hljs-comment">#Usage: sh .proxy.sh or alias &quot;proxyon&quot;</span>
 <span class="hljs-comment">#(Tatsuya Imai, Japan)</span>
 
-<span class="hljs-built_in">export</span> http_proxy=<span class="hljs-string">&quot;http://wwwproxy.kanazawa-it.ac.jp:8080/&quot;</span>
-<span class="hljs-built_in">export</span> https_proxy=<span class="hljs-string">&quot;http://wwwproxy.kanazawa-it.ac.jp:8080/&quot;</span>
+http_proxy=<span class="hljs-string">&quot;http://wwwproxy.kanazawa-it.ac.jp:8080/&quot;</span>
+https_proxy=<span class="hljs-string">&quot;http://wwwproxy.kanazawa-it.ac.jp:8080/&quot;</span>
 <span class="hljs-comment"># git settings</span>
 git config --global http.proxy http://wwwproxy.kanazawa-it.ac.jp:8080
 <span class="hljs-comment"># npm settings</span>
@@ -243,11 +243,11 @@ yarn config <span class="hljs-built_in">set</span> proxy http://wwwproxy.kanazaw
 yarn config <span class="hljs-built_in">set</span> https-proxy http://wwwproxy.kanazawa-it.ac.jp:8080
 <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Set proxy&quot;</span>
 </code></pre>
-<p><a href="https://github.com/101ta28/kit_dev_settings/blob/main/files/bash/.noproxy.sh" target="_blank">プロキシ切断スクリプト</a></p>
-<pre><code class="lang-bash"><span class="hljs-meta">#!/bin/bash</span>
+<p><a href="https://github.com/101ta28/kit_dev_settings/blob/main/files/zsh/.noproxy.sh" target="_blank">プロキシ切断スクリプト</a></p>
+<pre><code class="lang-zsh"><span class="hljs-meta">#!/bin/zsh</span>
 <span class="hljs-comment">#This is KIT proxy disconnect script.</span>
 <span class="hljs-comment">#You can use &quot;proxyoff&quot; alias.</span>
-<span class="hljs-comment">#&quot;echo &quot;alias proxyoff=&apos;source ~/.noproxy.sh&apos; &gt;&gt; .bashrc&quot;</span>
+<span class="hljs-comment">#&quot;echo &quot;alias proxyoff=&apos;source ~/.noproxy.sh&apos; &gt;&gt; .zshrc&quot;</span>
 <span class="hljs-comment">#Usage: sh .proxy.sh or alias &quot;proxyoff&quot;</span>
 <span class="hljs-comment">#(Tatsuya Imai, Japan)</span>
 
@@ -259,6 +259,9 @@ git config --global --<span class="hljs-built_in">unset</span> http.proxy
 npm -g config delete http-proxy
 npm -g config delete https-proxy
 npm -g config delete registry
+<span class="hljs-comment"># yarn settings</span>
+yarn config delete proxy
+yarn config delete https-proxy
 <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Unset proxy&quot;</span>
 </code></pre>
 
@@ -288,12 +291,12 @@ npm -g config delete registry
 
             
                 
-                <a href="PROXY-SERVER.html" class="navigation navigation-prev " aria-label="Previous page: プロキシサーバーについて">
+                <a href="PROXY-SERVER-BASH.html" class="navigation navigation-prev " aria-label="Previous page: Bashでプロキシに接続">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="PROXY-SERVER-ZSH.html" class="navigation navigation-next " aria-label="Next page: Zshでプロキシに接続">
+                <a href="POSTSCRIPT.html" class="navigation navigation-next " aria-label="Next page: おわりに">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -304,7 +307,7 @@ npm -g config delete registry
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"next":{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"path":"contents/PROXY-SERVER-ZSH.md","ref":"contents/PROXY-SERVER-ZSH.md","articles":[]},"previous":{"title":"プロキシサーバーについて","level":"1.3","depth":1,"path":"contents/PROXY-SERVER.md","ref":"contents/PROXY-SERVER.md","articles":[{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"path":"contents/PROXY-SERVER-BASH.md","ref":"contents/PROXY-SERVER-BASH.md","articles":[]},{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"path":"contents/PROXY-SERVER-ZSH.md","ref":"contents/PROXY-SERVER-ZSH.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Imai Tatsuya","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"KIT Dev Settings","language":"ja","gitbook":"*","description":"学内で開発するときに必要な情報"},"file":{"path":"contents/PROXY-SERVER-BASH.md","mtime":"2023-05-11T07:57:41.073Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-11T07:57:58.232Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Zshでプロキシに接続","level":"1.3.2","depth":2,"next":{"title":"おわりに","level":"1.4","depth":1,"path":"contents/POSTSCRIPT.md","ref":"contents/POSTSCRIPT.md","articles":[]},"previous":{"title":"Bashでプロキシに接続","level":"1.3.1","depth":2,"path":"contents/PROXY-SERVER-BASH.md","ref":"contents/PROXY-SERVER-BASH.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Imai Tatsuya","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"KIT Dev Settings","language":"ja","gitbook":"*","description":"学内で開発するときに必要な情報"},"file":{"path":"contents/PROXY-SERVER-ZSH.md","mtime":"2023-05-11T07:14:45.191Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-11T07:30:54.614Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
