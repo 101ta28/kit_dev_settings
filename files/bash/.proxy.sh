@@ -13,4 +13,7 @@ git config --global http.proxy http://wwwproxy.kanazawa-it.ac.jp:8080
 npm -g config set http-proxy "http://wwwproxy.kanazawa-it.ac.jp:8080/"
 npm -g config set https-proxy "http://wwwproxy.kanazawa-it.ac.jp:8080/"
 npm -g config set registry "http://registry.npmjs.org/"
+# yarn settings
+yarn config set proxy http://wwwproxy.kanazawa-it.ac.jp:8080
+yarn config set https-proxy http://wwwproxy.kanazawa-it.ac.jp:8080
 echo "Set proxy"

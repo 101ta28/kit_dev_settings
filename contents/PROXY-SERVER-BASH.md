@@ -8,7 +8,7 @@ BashはUbuntuやWSL(Windows Subsystem for Linux)、 macOS 10.15 Catalina**以前
 
 使い方はコメントを参照してください。
 
-[プロキシ接続スクリプト](https://github.com/i-ta28/kit_dev_settings/blob/main/files/bash/.proxy.sh)
+[プロキシ接続スクリプト](https://github.com/101ta28/kit_dev_settings/blob/main/files/bash/.proxy.sh)
 
 ```bash
 #!/bin/bash
@@ -26,10 +26,13 @@ git config --global http.proxy http://wwwproxy.kanazawa-it.ac.jp:8080
 npm -g config set http-proxy "http://wwwproxy.kanazawa-it.ac.jp:8080/"
 npm -g config set https-proxy "http://wwwproxy.kanazawa-it.ac.jp:8080/"
 npm -g config set registry "http://registry.npmjs.org/"
+# yarn settings
+yarn config set proxy http://wwwproxy.kanazawa-it.ac.jp:8080
+yarn config set https-proxy http://wwwproxy.kanazawa-it.ac.jp:8080
 echo "Set proxy"
 ```
 
-[プロキシ切断スクリプト](https://github.com/i-ta28/kit_dev_settings/blob/main/files/bash/.noproxy.sh)
+[プロキシ切断スクリプト](https://github.com/101ta28/kit_dev_settings/blob/main/files/bash/.noproxy.sh)
 
 ```bash
 #!/bin/bash

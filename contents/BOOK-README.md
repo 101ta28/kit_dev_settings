@@ -14,6 +14,8 @@
 
 書いている人は専門的にLinuxやプロキシなどを触っている訳ではありません。
 
-このサイトや関連するファイルはGitHubで[管理](https://github.com/i-ta28/kit_dev_settings)しています。
+このサイトや関連するファイルはGitHubで管理しています。
 
-間違いや誤植があったら、Issues、Pull Request、[Twitter](https://twitter.com/101ta28)にお願いします。
+間違いや誤植があった場合、[GitHubリポジトリ](https://github.com/101ta28/kit_dev_settings)のIssues、Pull Requestをお気軽に投げて下さい。
+
+または、[Twitter](https://twitter.com/101ta28)のDMでも構いません。

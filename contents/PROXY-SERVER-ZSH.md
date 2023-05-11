@@ -8,7 +8,7 @@ ZshはmacOS 10.15 Catalina**以降**で利用されていることが多いで�
 
 使い方はコメントを参照してください。
 
-[プロキシ接続スクリプト](https://github.com/i-ta28/kit_dev_settings/blob/main/files/zsh/.proxy.sh)
+[プロキシ接続スクリプト](https://github.com/101ta28/kit_dev_settings/blob/main/files/zsh/.proxy.sh)
 
 ```zsh
 #!/bin/zsh
@@ -26,13 +26,16 @@ git config --global http.proxy http://wwwproxy.kanazawa-it.ac.jp:8080
 npm -g config set http-proxy "http://wwwproxy.kanazawa-it.ac.jp:8080/"
 npm -g config set https-proxy "http://wwwproxy.kanazawa-it.ac.jp:8080/"
 npm -g config set registry "http://registry.npmjs.org/"
+# yarn settings
+yarn config set proxy http://wwwproxy.kanazawa-it.ac.jp:8080
+yarn config set https-proxy http://wwwproxy.kanazawa-it.ac.jp:8080
 echo "Set proxy"
+
 ```
 
-[プロキシ切断スクリプト](https://github.com/i-ta28/kit_dev_settings/blob/main/files/zsh/.noproxy.sh)
+[プロキシ切断スクリプト](https://github.com/101ta28/kit_dev_settings/blob/main/files/zsh/.noproxy.sh)
 
 ```zsh
-#!/bin/zsh
 #!/bin/zsh
 #This is KIT proxy disconnect script.
 #You can use "proxyoff" alias.
@@ -48,5 +51,9 @@ git config --global --unset http.proxy
 npm -g config delete http-proxy
 npm -g config delete https-proxy
 npm -g config delete registry
+# yarn settings
+yarn config delete proxy
+yarn config delete https-proxy
 echo "Unset proxy"
+
 ```
